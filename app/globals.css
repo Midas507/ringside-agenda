@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 bg-[#E8186D] hover:bg-[#C01258] text-white font-bold text-xs uppercase tracking-widest px-7 py-4 rounded-sm transition-colors cursor-pointer border-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2.5 border-2 border-[#FFB300] text-[#FFB300] hover:bg-[#FFB300] hover:text-black font-bold text-xs uppercase tracking-widest px-7 py-4 rounded-sm transition-colors cursor-pointer;
+  }
+}
+.max-w-7xl {
+  max-width: 1800px !important;
+}
