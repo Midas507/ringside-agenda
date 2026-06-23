@@ -1,7 +1,7 @@
 import {
   Facebook,
   Instagram,
-  Twitter,
+  X,
   Youtube,
   HelpCircle,
 } from "lucide-react";
@@ -31,7 +31,7 @@ export default function Footer() {
         />
       </div>
       <div className="max-w-7xl mx-auto px-6 py-14 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
           <div className="lg:col-span-1">
             <div className="mb-4">
               <LogoMark size={36} />
@@ -47,7 +47,7 @@ export default function Footer() {
                 <Instagram className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
               <a href="https://x.com/ringsideagenda" target="_blank" rel="noopener noreferrer">
-                <Twitter className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
+                <X className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
               <a href="https://www.youtube.com/@ringsideagenda" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
@@ -70,9 +70,19 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white/30 text-[11px] font-bold uppercase tracking-widest mb-4">
-              Infos
+              Contribuer
             </h3>
             <ul className="space-y-2.5 text-sm text-white/50">
+              <li>
+                <a href="/proposer-un-show" className="hover:text-[#E8186D] cursor-pointer transition-colors no-underline">
+                  📣 Proposer un show
+                </a>
+              </li>
+              <li>
+                <a href="/suggestion" className="hover:text-[#FFB300] cursor-pointer transition-colors no-underline">
+                  💡 Idée / Suggestion
+                </a>
+              </li>
               <li>
                 <a href="mailto:ringsideagenda@gmail.com?subject=Ajout d'un show" className="hover:text-white cursor-pointer transition-colors no-underline">
                   Ajouter un show
@@ -83,6 +93,14 @@ export default function Footer() {
                   FAQ Promoteurs
                 </a>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white/30 text-[11px] font-bold uppercase tracking-widest mb-4">
+              Infos
+            </h3>
+            <ul className="space-y-2.5 text-sm text-white/50">
               <li>
                 <a href="/contact" className="hover:text-white cursor-pointer transition-colors no-underline">
                   Contact
@@ -133,7 +151,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#FFB300] hover:bg-[#E8186D] text-black hover:text-white text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-colors no-underline"
               >
-                <Twitter className="w-3.5 h-3.5" /> Twitter
+                <X className="w-3.5 h-3.5" /> X
               </a>
             </div>
 

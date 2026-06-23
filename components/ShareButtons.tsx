@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Facebook, Twitter, MessageCircle, Link as LinkIcon, Check, Share2 } from "lucide-react";
+import { Facebook, X, MessageCircle, Link as LinkIcon, Check, Share2 } from "lucide-react";
 
 export default function ShareButtons({ title, url }: { title: string; url?: string }) {
   const [copied, setCopied] = useState(false);
@@ -12,7 +12,7 @@ export default function ShareButtons({ title, url }: { title: string; url?: stri
 
   const links = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+    X: `https://X.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
     whatsapp: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
   };
 
@@ -74,7 +74,7 @@ export default function ShareButtons({ title, url }: { title: string; url?: stri
           <Facebook size={14} /> Facebook
         </a>
         <a
-          href={links.twitter}
+          href={links.X}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -84,7 +84,7 @@ export default function ShareButtons({ title, url }: { title: string; url?: stri
             border: "1px solid #333",
           }}
         >
-          <Twitter size={14} /> Twitter
+          <X size={14} /> X
         </a>
         <a
           href={links.whatsapp}

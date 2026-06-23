@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Instagram, Facebook, Twitter } from "lucide-react";
+import { Mail, Instagram, Facebook, X } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -130,7 +130,7 @@ export default function ContactPage() {
               <Facebook size={18} />
             </a>
             <a href="https://x.com/ringsideagenda" target="_blank" rel="noopener noreferrer" style={socialBtn}>
-              <Twitter size={18} />
+              <X size={18} />
             </a>
           </div>
         </section>

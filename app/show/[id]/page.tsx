@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       images: [{ url: image, width: 1200, height: 630, alt: show.titre }],
       type: "article",
     },
-    twitter: {
+    X: {
       card: "summary_large_image",
       title,
       description,

@@ -1,7 +1,7 @@
 "use client";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Calendar, MapPin, Plus, Mail, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import { Calendar, MapPin, Plus, Mail, Instagram, Facebook, X, Youtube } from "lucide-react";
 
 export default function APropos() {
   return (
@@ -476,7 +476,7 @@ export default function APropos() {
                 e.currentTarget.style.color = "#E8186D";
               }}
             >
-              <Twitter size={20} />
+              <X size={20} />
             </a>
             <a
               href="https://www.youtube.com/@ringsideagenda"
