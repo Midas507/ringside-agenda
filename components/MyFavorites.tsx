@@ -146,7 +146,7 @@ export default function MyFavorites() {
         )}
       </div>
 
-      {/* Fédérations suivies */}
+      {/* Promotions suivies */}
       <div style={{
         padding: "24px",
         background: "#161616",
@@ -162,7 +162,7 @@ export default function MyFavorites() {
             textTransform: "uppercase",
             letterSpacing: "0.04em",
           }}>
-            Fédérations suivies ({followedFeds.length})
+            Promotions suivies ({followedFeds.length})
           </h3>
         </div>
 

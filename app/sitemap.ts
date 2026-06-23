@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Pages dynamiques : fédérations
+  // Pages dynamiques : promotions
   const { data: federations } = await supabase
     .from("federations")
     .select("id")

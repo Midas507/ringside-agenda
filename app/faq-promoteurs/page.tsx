@@ -2,8 +2,8 @@ import FaqPromoteurs from "@/components/FaqPromoteurs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQ Promoteurs - Toutes les réponses pour les fédérations",
-  description: "Foire aux questions pour les promoteurs et fédérations de catch. Découvre comment référencer tes shows, gérer ton compte et utiliser les outils Premium sur Ringside Agenda.",
+  title: "FAQ Promoteurs - Toutes les réponses pour les promotions",
+  description: "Foire aux questions pour les promoteurs et promotions de catch. Découvre comment référencer tes shows, gérer ton compte et utiliser les outils Premium sur Ringside Agenda.",
   openGraph: {
     title: "FAQ Promoteurs - Ringside Agenda",
     description: "Toutes les réponses pour les promoteurs de catch sur Ringside Agenda.",

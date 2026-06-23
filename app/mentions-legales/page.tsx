@@ -39,12 +39,12 @@ export default function MentionsLegalesPage() {
 
         <Section title="Propriété intellectuelle">
           <p>L'ensemble du contenu du site (textes, images, logos, design) est protégé par le droit d'auteur.</p>
-          <p>Les logos des fédérations, les affiches de shows et les marques apparaissant sur le site appartiennent à leurs propriétaires respectifs. Ringside Agenda les affiche dans le cadre de la promotion de leurs événements.</p>
+          <p>Les logos des promotions, les affiches de shows et les marques apparaissant sur le site appartiennent à leurs propriétaires respectifs. Ringside Agenda les affiche dans le cadre de la promotion de leurs événements.</p>
           <p>Toute reproduction, modification ou diffusion sans autorisation est interdite.</p>
         </Section>
 
         <Section title="Responsabilité">
-          <p>Ringside Agenda met tout en œuvre pour fournir des informations exactes et à jour. Cependant, le site ne peut garantir l'exactitude des informations transmises par les fédérations (dates, lieux, billetteries).</p>
+          <p>Ringside Agenda met tout en œuvre pour fournir des informations exactes et à jour. Cependant, le site ne peut garantir l'exactitude des informations transmises par les promotions (dates, lieux, billetteries).</p>
           <p>Les utilisateurs sont invités à vérifier les informations directement auprès des organisateurs avant tout déplacement ou achat.</p>
         </Section>
 

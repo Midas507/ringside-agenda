@@ -63,7 +63,7 @@ export default function Footer() {
               <li><a href="/" className="hover:text-white cursor-pointer transition-colors no-underline">Accueil</a></li>
               <li><a href="/calendrier" className="hover:text-white cursor-pointer transition-colors no-underline">Calendrier</a></li>
               <li><a href="/carte" className="hover:text-white cursor-pointer transition-colors no-underline">Carte</a></li>
-              <li><a href="/federations" className="hover:text-white cursor-pointer transition-colors no-underline">Fédérations</a></li>
+              <li><a href="/federations" className="hover:text-white cursor-pointer transition-colors no-underline">Promotions</a></li>
               <li><a href="/a-propos" className="hover:text-white cursor-pointer transition-colors no-underline">À propos</a></li>
             </ul>
           </div>

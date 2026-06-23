@@ -92,7 +92,7 @@ export default function FederationDetailClient({ federationId }: { federationId:
           FÉDÉRATION INTROUVABLE
         </h1>
         <a href="/federations" style={{ color: "#FFB300", textDecoration: "none" }}>
-          ← Retour aux fédérations
+          ← Retour aux promotions
         </a>
       </div>
     );
@@ -119,7 +119,7 @@ export default function FederationDetailClient({ federationId }: { federationId:
             marginBottom: "24px",
           }}
         >
-          <ArrowLeft size={14} /> Retour aux fédérations
+          <ArrowLeft size={14} /> Retour aux promotions
         </a>
 
         {/* Header de la fédération */}

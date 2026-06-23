@@ -8,7 +8,7 @@ const navLinks = [
   { label: "ACCUEIL", href: "/" },
   { label: "CALENDRIER", href: "/calendrier" },
   { label: "CARTE", href: "/carte" },
-  { label: "FÉDÉRATIONS", href: "/federations" },
+  { label: "PROMOTIONS", href: "/federations" },
   { label: "À PROPOS", href: "/a-propos" },
 ];
 
@@ -345,7 +345,7 @@ export default function Header() {
                     letterSpacing: "0.1em",
                     marginBottom: "8px",
                   }}>
-                    FÉDÉRATIONS ({filteredFeds.length})
+                    PROMOTIONS ({filteredFeds.length})
                   </h3>
                   {filteredFeds.map((fed) => (
                     <a

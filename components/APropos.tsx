@@ -99,7 +99,7 @@ export default function APropos() {
             marginBottom: "16px",
           }}>
             La scène catch francophone est riche, diverse et passionnée — mais elle reste souvent méconnue du grand public.
-            De nombreuses fédérations talentueuses travaillent dans l'ombre, organisant des shows incroyables qui méritent
+            De nombreuses promotions talentueuses travaillent dans l'ombre, organisant des shows incroyables qui méritent
             d'être vus.
           </p>
           <p style={{
@@ -108,7 +108,7 @@ export default function APropos() {
             lineHeight: 1.8,
           }}>
             <strong style={{ color: "white" }}>Notre objectif :</strong> donner de la visibilité à toutes ces promotions,
-            créer du lien entre les fans et les fédérations, et faire grandir la communauté du catch francophone.
+            créer du lien entre les fans et les promotions, et faire grandir la communauté du catch francophone.
             Un seul endroit pour tout savoir, un seul agenda pour tout planifier.
           </p>
         </section>
@@ -197,7 +197,7 @@ export default function APropos() {
               </p>
             </div>
 
-            {/* Fédérations */}
+            {/* promotions */}
             <div style={{
               padding: "20px",
               background: "#161616",
@@ -225,7 +225,7 @@ export default function APropos() {
                 marginBottom: "8px",
                 letterSpacing: "0.04em",
               }}>
-                Les Fédérations
+                Les promotions
               </h3>
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "13px", lineHeight: 1.6 }}>
                 Découvre toutes les promotions de catch francophones, leur histoire, leurs prochains shows et leurs réseaux sociaux.

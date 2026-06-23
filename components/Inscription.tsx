@@ -252,7 +252,7 @@ export default function Inscription() {
                   </span>
                 </div>
                 <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
-                  Newsletter mensuelle avec les shows du mois, les nouveautés et les annonces des fédérations.
+                  Newsletter mensuelle avec les shows du mois, les nouveautés et les annonces des promotions.
                 </p>
               </div>
             </label>

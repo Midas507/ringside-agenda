@@ -51,7 +51,7 @@ const sections: Section[] = [
       },
       {
         question: "Quels seront les tarifs ?",
-        answer: "Les tarifs seront annoncés au lancement, mais on prévoit des formules accessibles, adaptées aux petites comme aux grandes fédérations. Tu peux te pré-inscrire en envoyant un mail pour être prévenu en avant-première (et bénéficier de tarifs préférentiels au lancement).",
+        answer: "Les tarifs seront annoncés au lancement, mais on prévoit des formules accessibles, adaptées aux petites comme aux grandes promotions. Tu peux te pré-inscrire en envoyant un mail pour être prévenu en avant-première (et bénéficier de tarifs préférentiels au lancement).",
       },
       {
         question: "Quelle est la différence avec le Pass Premium ?",
@@ -100,8 +100,8 @@ const sections: Section[] = [
         answer: "C'est pour éviter que n'importe qui s'attribue une fédération qui n'est pas la sienne. On vérifie rapidement que tu es bien le représentant officiel de la fédération que tu déclares (via tes réseaux sociaux, un email pro, etc.).",
       },
       {
-        question: "Je gère plusieurs fédérations, comment faire ?",
-        answer: "Contacte-nous à ringsideagenda@gmail.com en précisant les différentes fédérations que tu gères. Nous mettrons en place un accès multi-fédérations pour toi.",
+        question: "Je gère plusieurs promotions, comment faire ?",
+        answer: "Contacte-nous à ringsideagenda@gmail.com en précisant les différentes promotions que tu gères. Nous mettrons en place un accès multi-promotions pour toi.",
       },
       {
         question: "Comment vous contacter ?",

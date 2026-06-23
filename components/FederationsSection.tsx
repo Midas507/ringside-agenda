@@ -86,7 +86,7 @@ export default function FederationsSection() {
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="flex flex-col xl:flex-row gap-12">
 
-        {/* Fédérations à Suivre */}
+        {/* Promotions à Suivre */}
         <div className="flex-1">
           <div className="flex items-center justify-between mb-6">
             <h2 className="flex items-center gap-2">
@@ -95,7 +95,7 @@ export default function FederationsSection() {
                 className="text-2xl uppercase tracking-wider text-white"
                 style={{ fontFamily: "var(--font-bebas)" }}
               >
-                Fédérations à Suivre
+                Promotions à Suivre
               </span>
             </h2>
             <a

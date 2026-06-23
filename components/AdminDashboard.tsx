@@ -284,13 +284,13 @@ export default function AdminDashboard() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "12px", marginBottom: "24px" }}>
           <StatCard icon={<Eye size={18} />} label="Vues totales (shows)" value={totalViews} color="#E8186D" />
           <StatCard icon={<MousePointerClick size={18} />} label="Clics billetterie" value={totalClicks} color="#FFB300" />
-          <StatCard icon={<BarChart3 size={18} />} label="Vues totales (fédérations)" value={totalFedViews} color="#10B981" />
+          <StatCard icon={<BarChart3 size={18} />} label="Vues totales (promotions)" value={totalFedViews} color="#10B981" />
         </div>
 
         <div style={{ display: "flex", gap: "8px", marginBottom: "24px", borderBottom: "1px solid #252525", flexWrap: "wrap" }}>
           <TabButton active={tab === "shows"} onClick={() => setTab("shows")} icon={<CalIcon size={14} />} label={`Shows à venir (${upcomingShows.length})`} />
           <TabButton active={tab === "past"} onClick={() => setTab("past")} icon={<Archive size={14} />} label={`Shows passés (${pastShows.length})`} />
-          <TabButton active={tab === "federations"} onClick={() => setTab("federations")} icon={<Star size={14} />} label={`Fédérations (${federations.length})`} />
+          <TabButton active={tab === "federations"} onClick={() => setTab("federations")} icon={<Star size={14} />} label={`promotions (${federations.length})`} />
           <TabButton active={tab === "promoteurs"} onClick={() => setTab("promoteurs")} icon={<Megaphone size={14} />} label={`Promoteurs (${promoteurs.length})`} badge={pendingPromoCount} />
           <TabButton active={tab === "comments"} onClick={() => setTab("comments")} icon={<MessageCircle size={14} />} label={`Commentaires (${comments.length})`} badge={pendingCommentsCount} />
         </div>

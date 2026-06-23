@@ -69,7 +69,7 @@ export default function FederationsClient() {
               marginBottom: "8px",
             }}
           >
-            FÉDÉRATIONS <span style={{ color: "#E8186D" }}>FRANCOPHONES</span>
+            PROMOTIONS <span style={{ color: "#E8186D" }}>FRANCOPHONES</span>
           </h1>
           <p
             style={{

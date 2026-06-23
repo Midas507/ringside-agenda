@@ -2,11 +2,11 @@ import FederationsClient from "@/components/FederationsClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Toutes les fédérations de catch francophones",
-  description: "Découvre toutes les fédérations de catch indépendant en France, Belgique et Suisse. APC, KHAO, RIXE, NWC et bien d'autres.",
+  title: "Toutes les promotions de catch francophones",
+  description: "Découvre toutes les promotions de catch indépendant en France, Belgique et Suisse. APC, KHAO, RIXE, NWC et bien d'autres.",
   openGraph: {
-    title: "Toutes les fédérations de catch francophones",
-    description: "Découvre toutes les fédérations de catch indépendant francophones.",
+    title: "Toutes les promotions de catch francophones",
+    description: "Découvre toutes les promotions de catch indépendant francophones.",
     type: "website",
   },
 };

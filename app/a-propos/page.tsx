@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "À propos - Notre mission pour le catch francophone",
-  description: "Ringside Agenda est la première plateforme dédiée au catch indépendant francophone. Notre mission : connecter les fans aux fédérations en France, Belgique et Suisse.",
+  description: "Ringside Agenda est la première plateforme dédiée au catch indépendant francophone. Notre mission : connecter les fans aux promotions en France, Belgique et Suisse.",
   openGraph: {
     title: "À propos de Ringside Agenda",
     description: "Notre mission pour le catch indépendant francophone.",

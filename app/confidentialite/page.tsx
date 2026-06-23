@@ -42,7 +42,7 @@ export default function ConfidentialitePage() {
         </Section>
 
         <Section title="Partenaires et services tiers">
-          <p>Le site peut contenir des liens vers des sites tiers (billetteries, réseaux sociaux des fédérations). Ringside Agenda n'est pas responsable de leur politique de confidentialité.</p>
+          <p>Le site peut contenir des liens vers des sites tiers (billetteries, réseaux sociaux des promotions). Ringside Agenda n'est pas responsable de leur politique de confidentialité.</p>
           <p>Le site utilise <strong>Supabase</strong> comme base de données et <strong>Vercel</strong> pour l'hébergement. Ces services peuvent collecter des données techniques (adresse IP, navigateur) à des fins de sécurité et de fonctionnement.</p>
         </Section>
 

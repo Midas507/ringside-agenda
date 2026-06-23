@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Calendrier - Tous les shows de catch francophone",
-  description: "Calendrier complet des shows de catch en France, Belgique et Suisse. Découvre les prochains événements de toutes les fédérations indépendantes francophones.",
+  description: "Calendrier complet des shows de catch en France, Belgique et Suisse. Découvre les prochains événements de toutes les promotions indépendantes francophones.",
   openGraph: {
     title: "Calendrier - Tous les shows de catch francophone",
     description: "Calendrier complet des shows de catch en France, Belgique et Suisse.",
