@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Anton, Press_Start_2P } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import PageTransition from "@/components/PageTransition";
 
@@ -85,6 +86,7 @@ export default function RootLayout({
         className={`${inter.variable} ${anton.variable} ${pixelFont.variable} bg-[#0D0D0D] text-white antialiased`}
       >
         <PageTransition>{children}</PageTransition>
+        <Analytics />
       </body>
     </html>
   );
