@@ -65,6 +65,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
+  verification: {
+    google: "NJ8tP90Fd0YD2e1J9RcZel0NzQEUja42BASjyCXKpcE",
+  },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
