@@ -40,13 +40,13 @@ export default function Footer() {
               Le calendrier référence du catch indépendant francophone.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/ringsideagenda" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=61591310731619" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
-              <a href="https://www.instagram.com/ringsideagenda" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/ringside.agenda/" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
-              <a href="https://x.com/ringsideagenda" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/RingsideAgenda" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
               <a href="https://www.youtube.com/@ringsideagenda" target="_blank" rel="noopener noreferrer">
@@ -130,7 +130,7 @@ export default function Footer() {
             </h3>
             <div className="flex flex-wrap gap-2 mb-5">
               <a
-                href="https://www.facebook.com/ringsideagenda"
+                href="https://www.facebook.com/profile.php?id=61591310731619"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#FFB300] hover:bg-[#E8186D] text-black hover:text-white text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-colors no-underline"
@@ -138,7 +138,7 @@ export default function Footer() {
                 <Facebook className="w-3.5 h-3.5" /> Facebook
               </a>
               <a
-                href="https://www.instagram.com/ringsideagenda"
+                href="https://www.instagram.com/ringside.agenda/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#FFB300] hover:bg-[#E8186D] text-black hover:text-white text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-colors no-underline"
@@ -146,7 +146,7 @@ export default function Footer() {
                 <Instagram className="w-3.5 h-3.5" /> Instagram
               </a>
               <a
-                href="https://x.com/ringsideagenda"
+                href="https://x.com/RingsideAgenda"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#FFB300] hover:bg-[#E8186D] text-black hover:text-white text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-colors no-underline"

@@ -398,7 +398,7 @@ export default function APropos() {
             flexWrap: "wrap",
           }}>
             <a
-              href="https://www.instagram.com/ringsideagenda"
+              href="https://www.instagram.com/ringside.agenda/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -425,7 +425,7 @@ export default function APropos() {
               <Instagram size={20} />
             </a>
             <a
-              href="https://www.facebook.com/ringsideagenda"
+              href="https://www.facebook.com/profile.php?id=61591310731619"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -452,7 +452,7 @@ export default function APropos() {
               <Facebook size={20} />
             </a>
             <a
-              href="https://x.com/ringsideagenda"
+              href="https://x.com/RingsideAgenda"
               target="_blank"
               rel="noopener noreferrer"
               style={{
