@@ -151,7 +151,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#FFB300] hover:bg-[#E8186D] text-black hover:text-white text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-colors no-underline"
               >
-                <Twitter className="w-3.5 h-3.5" /> Twitter
+                <Twitter className="w-3.5 h-3.5" /> X
               </a>
             </div>
 
