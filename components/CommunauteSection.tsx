@@ -1,3 +1,4 @@
+"use client";
 import { Megaphone, Lightbulb, ArrowRight } from "lucide-react";
 
 export default function CommunauteSection() {
