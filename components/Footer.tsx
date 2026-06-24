@@ -1,7 +1,7 @@
 import {
   Facebook,
   Instagram,
-  X,
+  Twitter,
   Youtube,
   HelpCircle,
 } from "lucide-react";
@@ -47,7 +47,7 @@ export default function Footer() {
                 <Instagram className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
               <a href="https://x.com/ringsideagenda" target="_blank" rel="noopener noreferrer">
-                <X className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
+                <Twitter className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
               </a>
               <a href="https://www.youtube.com/@ringsideagenda" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-4 h-4 text-white/30 hover:text-[#E8186D] cursor-pointer transition-colors" />
@@ -151,7 +151,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#FFB300] hover:bg-[#E8186D] text-black hover:text-white text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-colors no-underline"
               >
-                <X className="w-3.5 h-3.5" /> X
+                <Twitter className="w-3.5 h-3.5" /> Twitter
               </a>
             </div>
 
