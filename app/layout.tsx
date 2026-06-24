@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  X: {
+  twitter: {
     card: "summary_large_image",
     title: "Ringside Agenda – Le calendrier du catch francophone",
     description: "Tous les shows de catch en France, Belgique & Suisse. Ton agenda complet du catch indépendant.",
