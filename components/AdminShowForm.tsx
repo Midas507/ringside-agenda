@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { X, Upload, Star } from "lucide-react";
+import { X, Upload, Star, Users } from "lucide-react";
 
 type Show = {
   id: number;
@@ -18,6 +18,7 @@ type Show = {
   gratuit: boolean;
   featured?: boolean;
   featured_until?: string | null;
+  carte?: string | null;
 };
 
 type Federation = {
@@ -49,6 +50,7 @@ export default function AdminShowForm({
   const [gratuit, setGratuit] = useState(show?.gratuit || false);
   const [featured, setFeatured] = useState(show?.featured || false);
   const [featuredUntil, setFeaturedUntil] = useState(show?.featured_until || "");
+  const [carte, setCarte] = useState(show?.carte || "");
   const [uploading, setUploading] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -89,6 +91,7 @@ export default function AdminShowForm({
       gratuit,
       featured,
       featured_until: featuredUntil || null,
+      carte: carte || null,
     };
 
     const { error } = show
@@ -140,7 +143,7 @@ export default function AdminShowForm({
           <Field label="Titre" value={titre} onChange={setTitre} required />
 
           <div>
-            <Label>Fédération</Label>
+            <Label>Promotion</Label>
             <select
               required
               value={federation}
@@ -184,6 +187,29 @@ export default function AdminShowForm({
               rows={4}
               style={{ ...inputStyle, resize: "vertical", fontFamily: "Inter, sans-serif" }}
             />
+          </div>
+
+          {/* Carte du show */}
+          <div style={{
+            padding: "14px",
+            background: "rgba(255,179,0,0.05)",
+            border: "1px solid rgba(255,179,0,0.3)",
+            borderRadius: "4px",
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+              <Users size={14} style={{ color: "#FFB300" }} />
+              <Label>Carte du show — catcheurs/euses présent(e)s (optionnel)</Label>
+            </div>
+            <textarea
+              value={carte}
+              onChange={(e) => setCarte(e.target.value)}
+              rows={3}
+              placeholder="Ex: John Doe, Jane Smith, El Luchador, The Destroyer..."
+              style={{ ...inputStyle, resize: "vertical", fontFamily: "Inter, sans-serif" }}
+            />
+            <p style={{ fontSize: "10px", color: "rgba(255,255,255,0.35)", marginTop: "6px" }}>
+              Sépare les noms par des virgules. Sera affiché sur la page du show.
+            </p>
           </div>
 
           <Field label="Lien billetterie (optionnel)" value={lienBilletterie} onChange={setLienBilletterie} placeholder="https://..." />

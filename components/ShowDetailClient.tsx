@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Calendar, MapPin, ExternalLink, ArrowLeft } from "lucide-react";
+import { Calendar, MapPin, ExternalLink, ArrowLeft, Users } from "lucide-react";
 import FavoriteShowButton from "./FavoriteShowButton";
 import ShareButtons from "./ShareButtons";
 import Countdown from "./Countdown";
@@ -22,6 +22,7 @@ type Show = {
   image_url: string | null;
   description: string | null;
   lien_billetterie: string | null;
+  carte: string | null;
   fed_logo?: string | null;
 };
 
@@ -121,6 +122,11 @@ export default function ShowDetailClient({ showId }: { showId: string }) {
   const today = new Date().toISOString().split("T")[0];
   const isUpcoming = show.date >= today;
   const isPast = show.date < today;
+
+  // Parse la carte en liste de catcheurs
+  const catcheurs = show.carte
+    ? show.carte.split(",").map((c) => c.trim()).filter((c) => c.length > 0)
+    : [];
 
   return (
     <>
@@ -331,6 +337,58 @@ export default function ShowDetailClient({ showId }: { showId: string }) {
                 </p>
               </div>
             )}
+
+            {/* Carte du show - catcheurs présents */}
+            {catcheurs.length > 0 && (
+              <div
+                style={{
+                  padding: "20px 24px",
+                  background: "#161616",
+                  border: "1px solid #FFB300",
+                  borderRadius: "6px",
+                  marginTop: "16px",
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "var(--font-bebas)",
+                    fontSize: "20px",
+                    color: "#FFB300",
+                    textTransform: "uppercase",
+                    marginBottom: "16px",
+                    letterSpacing: "0.05em",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  }}
+                >
+                  <Users size={18} /> Carte du show
+                </h3>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                  {catcheurs.map((nom, i) => (
+                    <span
+                      key={i}
+                      style={{
+                        display: "inline-block",
+                        background: "rgba(255,179,0,0.1)",
+                        border: "1px solid rgba(255,179,0,0.3)",
+                        color: "white",
+                        fontSize: "13px",
+                        fontWeight: "600",
+                        padding: "8px 14px",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      {nom}
+                    </span>
+                  ))}
+                </div>
+                <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.35)", marginTop: "14px", fontStyle: "italic" }}>
+                  Carte sous réserve de modifications de la part de la promotion.
+                </p>
+              </div>
+            )}
+
           <ShowComments showId={show.id} />
             <ShareButtons title={`${show.titre} - ${show.federation}`} />
           </div>
