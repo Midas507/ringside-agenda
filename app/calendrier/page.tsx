@@ -2,12 +2,28 @@ import CalendrierClient from "@/components/CalendrierClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Calendrier - Tous les shows de catch francophone",
-  description: "Calendrier complet des shows de catch en France, Belgique et Suisse. Découvre les prochains événements de toutes les promotions indépendantes francophones.",
+  title: "Calendrier Catch – Tous les shows France, Belgique & Suisse",
+  description: "Calendrier et agenda complet des shows de catch en France, Belgique et Suisse. Retrouve tous les prochains événements de catch et wrestling indépendant francophones, classés par mois.",
+  keywords: [
+    "calendrier catch",
+    "agenda catch",
+    "calendrier catch france",
+    "calendrier catch belgique",
+    "calendrier catch suisse",
+    "agenda catch france",
+    "prochains shows catch",
+    "événements catch france",
+    "shows wrestling france",
+    "catch indépendant calendrier",
+  ],
   openGraph: {
-    title: "Calendrier - Tous les shows de catch francophone",
-    description: "Calendrier complet des shows de catch en France, Belgique et Suisse.",
+    title: "Calendrier Catch – Tous les shows France, Belgique & Suisse",
+    description: "Calendrier et agenda complet des shows de catch en France, Belgique et Suisse. Tous les événements wrestling francophones.",
     type: "website",
+    url: "https://ringside-agenda.vercel.app/calendrier",
+  },
+  alternates: {
+    canonical: "https://ringside-agenda.vercel.app/calendrier",
   },
 };
 

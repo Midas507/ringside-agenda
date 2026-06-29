@@ -6,6 +6,7 @@ import MapSection from "@/components/MapSection";
 import FederationsSection from "@/components/FederationsSection";
 import PromoteurSection from "@/components/PromoteurSection";
 import CommunauteSection from "@/components/CommunauteSection";
+import SeoSection from "@/components/SeoSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <FederationsSection />
       <PromoteurSection />
       <CommunauteSection />
+      <SeoSection />
       <Footer />
     </main>
   );
