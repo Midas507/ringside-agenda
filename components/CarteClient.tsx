@@ -9,6 +9,7 @@ type Show = {
   titre: string;
   federation: string;
   date: string;
+  date_fin: string | null;
   ville: string;
   pays: string;
   latitude: number;
@@ -31,6 +32,21 @@ function formatDate(dateStr: string) {
     month: "long",
     year: "numeric",
   }).toUpperCase();
+}
+
+function formatDateRange(dateStr: string, dateFin: string | null) {
+  if (!dateFin || dateFin === dateStr) {
+    return formatDate(dateStr);
+  }
+  const d1 = new Date(dateStr);
+  const d2 = new Date(dateFin);
+  if (d1.getMonth() === d2.getMonth() && d1.getFullYear() === d2.getFullYear()) {
+    const reste = d2.toLocaleDateString("fr-FR", { month: "long", year: "numeric" }).toUpperCase();
+    return `DU ${d1.getDate()} AU ${d2.getDate()} ${reste}`;
+  }
+  const debut = d1.toLocaleDateString("fr-FR", { day: "numeric", month: "long" }).toUpperCase();
+  const fin = d2.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }).toUpperCase();
+  return `DU ${debut} AU ${fin}`;
 }
 
 export default function CarteClient() {
@@ -327,7 +343,7 @@ export default function CarteClient() {
                   }}
                 >
                   <Calendar size={13} style={{ color: "#E8186D" }} />
-                  {formatDate(selected.date)}
+                  {formatDateRange(selected.date, selected.date_fin)}
                 </div>
                 <div
                   style={{

@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { X, Upload, Star, Users } from "lucide-react";
+import { X, Upload, Star, Users, CalendarRange } from "lucide-react";
 
 type Show = {
   id: number;
   titre: string;
   federation: string;
   date: string;
+  date_fin?: string | null;
   ville: string;
   pays: string;
   latitude?: number | null;
@@ -40,6 +41,7 @@ export default function AdminShowForm({
   const [titre, setTitre] = useState(show?.titre || "");
   const [federation, setFederation] = useState(show?.federation || "");
   const [date, setDate] = useState(show?.date || "");
+  const [dateFin, setDateFin] = useState(show?.date_fin || "");
   const [ville, setVille] = useState(show?.ville || "");
   const [pays, setPays] = useState(show?.pays || "FR");
   const [latitude, setLatitude] = useState(show?.latitude?.toString() || "");
@@ -51,6 +53,7 @@ export default function AdminShowForm({
   const [featured, setFeatured] = useState(show?.featured || false);
   const [featuredUntil, setFeaturedUntil] = useState(show?.featured_until || "");
   const [carte, setCarte] = useState(show?.carte || "");
+  const [multiJours, setMultiJours] = useState(!!show?.date_fin);
   const [uploading, setUploading] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -81,6 +84,7 @@ export default function AdminShowForm({
       titre,
       federation,
       date,
+      date_fin: multiJours && dateFin ? dateFin : null,
       ville,
       pays,
       latitude: latitude ? parseFloat(latitude) : null,
@@ -157,9 +161,10 @@ export default function AdminShowForm({
             </select>
           </div>
 
+          {/* Dates */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
             <div>
-              <Label>Date</Label>
+              <Label>{multiJours ? "Date de début" : "Date"}</Label>
               <input type="date" required value={date} onChange={(e) => setDate(e.target.value)} style={inputStyle} />
             </div>
             <div>
@@ -170,6 +175,45 @@ export default function AdminShowForm({
                 <option value="CH">Suisse</option>
               </select>
             </div>
+          </div>
+
+          {/* Option multi-jours */}
+          <div style={{
+            padding: "12px",
+            background: "rgba(255,179,0,0.05)",
+            border: "1px solid rgba(255,179,0,0.3)",
+            borderRadius: "4px",
+          }}>
+            <label style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              cursor: "pointer",
+              marginBottom: multiJours ? "12px" : "0",
+            }}>
+              <input
+                type="checkbox"
+                checked={multiJours}
+                onChange={(e) => {
+                  setMultiJours(e.target.checked);
+                  if (!e.target.checked) setDateFin("");
+                }}
+              />
+              <CalendarRange size={14} style={{ color: "#FFB300" }} />
+              <span style={{ color: "#FFB300", fontSize: "13px", fontWeight: "700" }}>Ce show se déroule sur plusieurs jours</span>
+            </label>
+            {multiJours && (
+              <div>
+                <Label>Date de fin</Label>
+                <input
+                  type="date"
+                  value={dateFin}
+                  onChange={(e) => setDateFin(e.target.value)}
+                  min={date}
+                  style={inputStyle}
+                />
+              </div>
+            )}
           </div>
 
           <Field label="Ville (lieu)" value={ville} onChange={setVille} required />

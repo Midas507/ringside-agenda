@@ -15,6 +15,7 @@ type Show = {
   titre: string;
   federation: string;
   date: string;
+  date_fin: string | null;
   ville: string;
   pays: string;
   latitude: number | null;
@@ -41,6 +42,25 @@ function formatDateShort(dateStr: string) {
     month: "long",
     year: "numeric",
   }).toUpperCase();
+}
+
+// Affiche une plage de dates intelligemment
+function formatDateRange(dateStr: string, dateFin: string | null) {
+  if (!dateFin || dateFin === dateStr) {
+    return formatDate(dateStr);
+  }
+  const d1 = new Date(dateStr);
+  const d2 = new Date(dateFin);
+  // Même mois et année : "DU 4 AU 5 JUILLET 2026"
+  if (d1.getMonth() === d2.getMonth() && d1.getFullYear() === d2.getFullYear()) {
+    const jour1 = d1.getDate();
+    const reste = d2.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }).toUpperCase();
+    return `DU ${jour1} AU ${reste}`;
+  }
+  // Mois différents : "DU 30 AOÛT AU 2 SEPTEMBRE 2026"
+  const debut = d1.toLocaleDateString("fr-FR", { day: "numeric", month: "long" }).toUpperCase();
+  const fin = d2.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }).toUpperCase();
+  return `DU ${debut} AU ${fin}`;
 }
 
 export default function ShowDetailClient({ showId }: { showId: string }) {
@@ -120,8 +140,10 @@ export default function ShowDetailClient({ showId }: { showId: string }) {
 
   const heroImage = show.image_url || show.fed_logo || null;
   const today = new Date().toISOString().split("T")[0];
-  const isUpcoming = show.date >= today;
-  const isPast = show.date < today;
+  // Un show est "à venir" tant que sa date de fin (ou de début) n'est pas passée
+  const dateReference = show.date_fin || show.date;
+  const isUpcoming = dateReference >= today;
+  const isPast = dateReference < today;
 
   // Parse la carte en liste de catcheurs
   const catcheurs = show.carte
@@ -253,7 +275,7 @@ export default function ShowDetailClient({ showId }: { showId: string }) {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.7)" }}>
                   <Calendar size={16} style={{ color: "#E8186D" }} />
                   <span style={{ fontSize: "14px" }}>
-                    {formatDate(show.date)}
+                    {formatDateRange(show.date, show.date_fin)}
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "rgba(255,255,255,0.7)" }}>
@@ -481,7 +503,10 @@ export default function ShowDetailClient({ showId }: { showId: string }) {
                           color: "rgba(255,255,255,0.4)",
                         }}
                       >
-                        {formatDateShort(s.date)} · {s.ville}
+                        {s.date_fin && s.date_fin !== s.date
+                          ? formatDateRange(s.date, s.date_fin)
+                          : formatDateShort(s.date)}{" "}
+                        · {s.ville}
                       </div>
                     </div>
                   </a>

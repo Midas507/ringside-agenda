@@ -10,6 +10,7 @@ type Show = {
   titre: string;
   federation: string;
   date: string;
+  date_fin: string | null;
   ville: string;
   pays: string;
   image_url: string | null;
@@ -173,6 +174,7 @@ export default function CalendrierClient() {
                 <div className="space-y-3">
                   {grouped[monthKey].map((show) => {
                     const img = show.image_url || show.fed_logo || null;
+                    const isMultiDay = show.date_fin && show.date_fin !== show.date;
                     return (
                       <a
                         key={show.id}
@@ -223,12 +225,14 @@ export default function CalendrierClient() {
                           <span
                             style={{
                               fontFamily: "var(--font-bebas)",
-                              fontSize: "32px",
+                              fontSize: isMultiDay ? "24px" : "32px",
                               color: "#E8186D",
                               lineHeight: 1,
                             }}
                           >
-                            {formatDay(show.date)}
+                            {isMultiDay
+                              ? `${formatDay(show.date)}-${formatDay(show.date_fin!)}`
+                              : formatDay(show.date)}
                           </span>
                         </div>
 
@@ -291,6 +295,23 @@ export default function CalendrierClient() {
                             >
                               {show.federation}
                             </span>
+                            {isMultiDay && (
+                              <span
+                                style={{
+                                  display: "inline-block",
+                                  background: "rgba(255,179,0,0.15)",
+                                  border: "1px solid #FFB300",
+                                  color: "#FFB300",
+                                  fontFamily: "var(--font-pixel)",
+                                  fontSize: "6px",
+                                  letterSpacing: "0.1em",
+                                  padding: "3px 8px",
+                                  borderRadius: "2px",
+                                }}
+                              >
+                                SUR 2 JOURS
+                              </span>
+                            )}
                             {show.gratuit && (
                               <span
                                 style={{

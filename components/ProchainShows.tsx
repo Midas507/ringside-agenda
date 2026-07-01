@@ -8,6 +8,7 @@ type Show = {
   titre: string;
   federation: string;
   date: string;
+  date_fin: string | null;
   ville: string;
   pays: string;
   image_url: string | null;
@@ -26,6 +27,24 @@ function formatDate(dateStr: string) {
     month: "long",
     year: "numeric",
   }).toUpperCase();
+}
+
+// Affiche une plage de dates de façon compacte
+function formatDateRange(dateStr: string, dateFin: string | null) {
+  if (!dateFin || dateFin === dateStr) {
+    return formatDate(dateStr);
+  }
+  const d1 = new Date(dateStr);
+  const d2 = new Date(dateFin);
+  if (d1.getMonth() === d2.getMonth() && d1.getFullYear() === d2.getFullYear()) {
+    // "4-5 JUILLET 2026"
+    const reste = d2.toLocaleDateString("fr-FR", { month: "long", year: "numeric" }).toUpperCase();
+    return `${d1.getDate()}-${d2.getDate()} ${reste}`;
+  }
+  // "30 AOÛT - 2 SEPT."
+  const debut = d1.toLocaleDateString("fr-FR", { day: "numeric", month: "short" }).toUpperCase();
+  const fin = d2.toLocaleDateString("fr-FR", { day: "numeric", month: "short" }).toUpperCase();
+  return `${debut} - ${fin}`;
 }
 
 export default function ProchainShows() {
@@ -161,7 +180,7 @@ export default function ProchainShows() {
                   <div className="flex flex-wrap items-center gap-2 text-white/40 text-[9px] mb-1">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
-                      {formatDate(show.date)}
+                      {formatDateRange(show.date, show.date_fin)}
                     </span>
                     <span className="flex items-center gap-1">
                       <MapPin className="w-3 h-3" />

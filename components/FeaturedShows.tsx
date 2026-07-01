@@ -9,6 +9,7 @@ type Show = {
   titre: string;
   federation: string;
   date: string;
+  date_fin: string | null;
   ville: string;
   image_url: string | null;
   gratuit: boolean;
@@ -20,6 +21,19 @@ function formatDate(dateStr: string) {
     day: "numeric",
     month: "short",
   }).toUpperCase();
+}
+
+function formatDateRange(dateStr: string, dateFin: string | null) {
+  if (!dateFin || dateFin === dateStr) {
+    return formatDate(dateStr);
+  }
+  const d1 = new Date(dateStr);
+  const d2 = new Date(dateFin);
+  if (d1.getMonth() === d2.getMonth() && d1.getFullYear() === d2.getFullYear()) {
+    const mois = d2.toLocaleDateString("fr-FR", { month: "short" }).toUpperCase();
+    return `${d1.getDate()}-${d2.getDate()} ${mois}`;
+  }
+  return `${formatDate(dateStr)} - ${formatDate(dateFin)}`;
 }
 
 export default function FeaturedShows() {
@@ -198,7 +212,7 @@ export default function FeaturedShows() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "3px", fontSize: "10px", color: "rgba(255,255,255,0.6)" }}>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
-                  <Calendar size={10} style={{ color: "#FFB300" }} /> {formatDate(show.date)}
+                  <Calendar size={10} style={{ color: "#FFB300" }} /> {formatDateRange(show.date, show.date_fin)}
                 </span>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
                   <MapPin size={10} style={{ color: "#FFB300" }} /> {show.ville.split(" - ")[0]}
